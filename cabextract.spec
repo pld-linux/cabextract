@@ -6,8 +6,11 @@ Release:	1
 License:	GPL
 Group:		Applications/Archiving
 Source0:	http://www.kyz.uklinux.net/downloads/%{name}-%{version}.tar.gz
+Patch0:		%{name}-configure.patch
 URL:		http://www.kyz.uklinux.net/cabextract.php3
 BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -22,9 +25,14 @@ cabextract mo¿e takie pliki rozpakowaæ.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+rm -f missing
+%{__libtoolize}
+aclocal
 %{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
