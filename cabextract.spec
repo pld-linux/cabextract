@@ -1,12 +1,12 @@
 Summary:	A program to extract Microsoft Cabinet files
 Summary(pl):	Program do rozpakowywania plików MS Cabinet
 Name:		cabextract
-Version:	1.0
-Release:	2
+Version:	1.1
+Release:	1
 License:	GPL
 Group:		Applications/Archiving
 Source0:	http://www.kyz.uklinux.net/downloads/%{name}-%{version}.tar.gz
-# Source0-md5:	8fde8ad86f7144943b7e4e5a2da7eddb
+# Source0-md5:	f4b729c0be7d288660f4fc167de199a1
 URL:		http://www.kyz.uklinux.net/cabextract.php3
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
