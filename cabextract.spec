@@ -27,6 +27,7 @@ cabextract mo¿e takie pliki rozpakowaæ.
 %setup -q
 
 %build
+cp -f /usr/share/automake/config.sub .
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
