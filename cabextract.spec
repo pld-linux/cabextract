@@ -20,7 +20,7 @@ distribute their software, and things like Windows Font Packs. The
 cabextract program simply unpacks such files.
 
 %description -l pl
-Pliki Cabinet (.CAB) s± rodzajem archiwum, który Miscrosoft u¿ywa do
+Pliki Cabinet (.CAB) s± rodzajem archiwum, który Microsoft u¿ywa do
 dystrybucji swojego oprogramowania i rzeczy typu Windows Font Pack.
 cabextract mo¿e takie pliki rozpakowaæ.
 
