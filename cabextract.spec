@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		Applications/Archiving
 Source0:	http://www.kyz.uklinux.net/downloads/%{name}-%{version}.tar.gz
+# Source0-md5: 1e6e7d35d4ca4e5bd9cfc86aa315163b
 Patch0:		%{name}-configure.patch
 Patch1:		%{name}-segv.patch
 URL:		http://www.kyz.uklinux.net/cabextract.php3
