@@ -24,7 +24,7 @@ cabextract mo¿e takie pliki rozpakowaæ.
 %setup -q
 
 %build
-autoconf
+%{__autoconf}
 %configure
 %{__make}
 
