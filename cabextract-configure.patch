@@ -9,12 +9,11 @@ diff -uNr cabextract-0.6.orig/configure.in cabextract-0.6/configure.in
  AC_EXEEXT
  
  dnl Checks for libraries.
-@@ -29,6 +30,7 @@
+@@ -29,6 +30,6 @@
  AC_REPLACE_FUNCS(mktime)
  
  dnl check for getopt in standard library
 -AC_CHECK_FUNCS(getopt_long , , [LIBOBJS="$LIBOBJS getopt.o getopt1.o"] ) 
-+AC_LIBOBJ(getopt)
-+AC_LIBOBJ(getopt1)
++AC_CHECK_FUNCS(getopt_long , , [AC_LIBOBJ(getopt); AC_LIBOBJ(getopt1)] )
  
  AC_OUTPUT(Makefile cabextract.spec)
