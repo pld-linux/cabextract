@@ -5,8 +5,6 @@ Version:	0.5
 Release:	1
 License:	GPL
 Group:		Applications/Archiving
-Group(de):	Applikationen/Archivierung
-Group(pl):	Aplikacje/Archiwizacja
 Source0:	http://www.kyz.uklinux.net/downloads/%{name}-%{version}.tar.gz
 URL:		http://www.kyz.uklinux.net/cabextract.php3
 BuildRequires:	autoconf
