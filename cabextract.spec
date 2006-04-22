@@ -46,7 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install -D doc/ja/cabextract.1 $RPM_BUILD_ROOT%{_mandir}/ja/man1
+install -D doc/ja/cabextract.1 $RPM_BUILD_ROOT%{_mandir}/ja/man1/cabextract.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -56,4 +56,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS NEWS README TODO
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
-%lang(ja) %{_mandir}/ja/man1*
+%lang(ja) %{_mandir}/ja/man1/*
