@@ -1,0 +1,33 @@
+--- cabextract-1.1/configure.ac~	2004-10-15 23:05:09.000000000 +0300
++++ cabextract-1.1/configure.ac	2006-04-22 20:45:51.574146230 +0300
+@@ -9,7 +9,7 @@
+ # Checks for programs.
+ AC_PROG_CC
+ AC_PROG_INSTALL
+-AC_PROG_RANLIB
++AC_PROG_LIBTOOL
+ AC_EXEEXT
+ 
+ # Checks for header files.
+--- cabextract-1.1/Makefile.am	2004-07-16 15:36:02.000000000 +0300
++++ cabextract-1.1.x/Makefile.am	2006-04-22 20:46:57.475617674 +0300
+@@ -7,18 +7,8 @@
+ 			src/wince_info src/wince_rename
+ 
+ man_MANS =		doc/cabextract.1
+-
+-AM_CPPFLAGS = 		-I$(srcdir)/mspack -DMSPACK_NO_DEFAULT_SYSTEM
+-noinst_LIBRARIES =	libmspack.a
+-libmspack_a_SOURCES =	mspack/mspack.h \
+-			mspack/system.h mspack/system.c \
+-			mspack/cab.h mspack/cabd.c \
+-			mspack/lzx.h mspack/lzxd.c \
+-			mspack/mszip.h mspack/mszipd.c \
+-			mspack/qtm.h mspack/qtmd.c
+-
+ bin_PROGRAMS =		cabextract
+ noinst_PROGRAMS =	src/cabinfo
+ cabextract_SOURCES =	src/cabextract.c
+-cabextract_LDADD =	libmspack.a @LIBOBJS@ @ALLOCA@
++cabextract_LDADD =	-lmspack @LIBOBJS@ @ALLOCA@
+ 
