@@ -8,7 +8,7 @@ Group:		Applications/Archiving
 Source0:	http://www.kyz.uklinux.net/downloads/%{name}-%{version}.tar.gz
 # Source0-md5:	dc421a690648b503265c82ade84e143e
 Patch0:		%{name}-libmspack.patch
-URL:		http://www.kyz.uklinux.net/cabextract.php3
+URL:		http://www.kyz.uklinux.net/cabextract.php
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libmspack-devel >= 0.0.20060920alpha
