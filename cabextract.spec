@@ -1,5 +1,5 @@
 Summary:	A program to extract Microsoft Cabinet files
-Summary(pl):	Program do rozpakowywania plików MS Cabinet
+Summary(pl.UTF-8):   Program do rozpakowywania plikÃ³w MS Cabinet
 Name:		cabextract
 Version:	1.2
 Release:	1
@@ -20,10 +20,10 @@ Cabinet (.CAB) files are a form of archive, which Microsoft use to
 distribute their software, and things like Windows Font Packs. The
 cabextract program simply unpacks such files.
 
-%description -l pl
-Pliki Cabinet (.CAB) s± rodzajem archiwum, który Microsoft u¿ywa do
+%description -l pl.UTF-8
+Pliki Cabinet (.CAB) sÄ… rodzajem archiwum, ktÃ³ry Microsoft uÅ¼ywa do
 dystrybucji swojego oprogramowania i rzeczy typu Windows Font Pack.
-cabextract mo¿e takie pliki rozpakowaæ.
+cabextract moÅ¼e takie pliki rozpakowaÄ‡.
 
 %prep
 %setup -q
