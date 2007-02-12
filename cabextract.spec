@@ -1,5 +1,5 @@
 Summary:	A program to extract Microsoft Cabinet files
-Summary(pl.UTF-8):   Program do rozpakowywania plików MS Cabinet
+Summary(pl.UTF-8):	Program do rozpakowywania plików MS Cabinet
 Name:		cabextract
 Version:	1.2
 Release:	1
