@@ -1,18 +1,17 @@
 Summary:	A program to extract Microsoft Cabinet files
 Summary(pl.UTF-8):	Program do rozpakowywania plików MS Cabinet
 Name:		cabextract
-Version:	1.2
-Release:	2
+Version:	1.3
+Release:	1
 License:	GPL
 Group:		Applications/Archiving
 Source0:	http://www.cabextract.org.uk/%{name}-%{version}.tar.gz
-# Source0-md5:	dc421a690648b503265c82ade84e143e
-Patch0:		%{name}-libmspack.patch
+# Source0-md5:	cb9a4a38470d2a71a0275968e7eb64d3
 URL:		http://www.cabextract.org.uk/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
-BuildRequires:	libmspack-devel >= 0.0.20060920alpha
-Requires:	libmspack >= 0.0.20060920alpha
+BuildRequires:	libmspack-devel >= 0.2alpha
+Requires:	libmspack >= 0.2alpha
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -27,15 +26,14 @@ cabextract może takie pliki rozpakować.
 
 %prep
 %setup -q
-%patch0 -p1
-rm -rf mspack
 
 %build
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
+%configure \
+	--with-external-libmspack
 %{__make}
 
 %install
