@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Program do rozpakowywania plików MS Cabinet
 Name:		cabextract
 Version:	1.3
 Release:	1
-License:	GPL
+License:	GPL v2+
 Group:		Applications/Archiving
 Source0:	http://www.cabextract.org.uk/%{name}-%{version}.tar.gz
 # Source0-md5:	cb9a4a38470d2a71a0275968e7eb64d3
@@ -50,6 +50,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*
-%lang(ja) %{_mandir}/ja/man1/*
+%attr(755,root,root) %{_bindir}/cabextract
+%{_mandir}/man1/cabextract.1*
+%lang(ja) %{_mandir}/ja/man1/cabextract.1*
