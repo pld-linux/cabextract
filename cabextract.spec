@@ -10,7 +10,7 @@ Source0:	http://www.cabextract.org.uk/%{name}-%{version}.tar.gz
 URL:		http://www.cabextract.org.uk/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
-BuildRequires:	libmspack-devel >= 0.8alpha-3
+BuildRequires:	libmspack-devel >= 0.8alpha-5
 Requires:	libmspack >= 0.8alpha
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,7 +27,7 @@ cabextract może takie pliki rozpakować.
 %prep
 %setup -q
 # make sure we use system libmspack
-rm -rf mspack
+%{__rm} -r mspack
 
 %build
 %{__aclocal}
@@ -35,7 +35,7 @@ rm -rf mspack
 %{__autoheader}
 %{__automake}
 %configure \
-	CPPFLAGS="%{rpmcppflags} -I/usr/include/mspack" \
+	CPPFLAGS="%{rpmcppflags} -I/usr/include/libmspack" \
 	--with-external-libmspack
 %{__make}
 
