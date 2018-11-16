@@ -1,0 +1,14 @@
+--- cabextract-1.9/src/cabinfo.c~	2018-10-31 11:06:12.000000000 +0100
++++ cabextract-1.9/src/cabinfo.c	2018-11-16 07:41:46.199355355 +0100
+@@ -25,9 +25,9 @@
+ #include <sys/types.h>
+ 
+ /* include <system.h> from libmspack for LD and EndGetI?? macros */
+-#include <mspack/system.h>
++#include <libmspack/system.h>
+ /* include <cab.h> from libmspack for cab structure offsets */
+-#include <mspack/cab.h>
++#include <libmspack/cab.h>
+ 
+ #if HAVE_FSEEKO
+ # define FSEEK fseeko
